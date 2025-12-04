@@ -17,7 +17,7 @@ import com.example.kindnessjar.navigation.Routes
 import com.example.kindnessjar.screens.HomeScreen
 import com.example.kindnessjar.screens.ProgressScreen
 import com.example.kindnessjar.screens.HistoryScreen
-import com.example.kindnessjar.ui.components.BottomNavBar
+import com.example.kindnessjar.ui.theme.components.BottomNavBar
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,3 +59,4 @@ private fun AppRoot() {
         }
     }
 }
+

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">KindnessJar</string>
+    <!--  Home Screen Text  -->
+    <string name="welcome_to">Welcome To</string>
+    <string name="kindness_jar">KindnessJar</string>
+    <string name="pick_today_note">Pick Today’s Note</string>
 </resources>
