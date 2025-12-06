@@ -10,10 +10,10 @@
     <string name="weekly_completed">3 task completed this week</string>
     <!--  History Screen  -->
     <string name="history_title">History</string>
-    <string name="history_item_1_title">Helped Mom Cook</string>
+    <string name="history_item_1_title">Called a friend</string>
     <string name="history_item_1_date">22-01-2024</string>
-    <string name="history_item_2_title">Donated Old Clothes</string>
+    <string name="history_item_2_title">Helped mom</string>
     <string name="history_item_2_date">23-01-2024</string>
-    <string name="history_item_3_title">Fed a Street Dog</string>
+    <string name="history_item_3_title">Made food for family</string>
     <string name="history_item_3_date">24-01-2024</string>
 </resources>
