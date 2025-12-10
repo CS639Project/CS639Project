@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
 
 import com.example.kindnessjar.ui.theme.KindnessJarTheme
 
@@ -21,7 +22,7 @@ import com.example.kindnessjar.screens.ProgressScreen
 import com.example.kindnessjar.screens.HistoryScreen
 import com.example.kindnessjar.screens.ChallengeScreen
 
-import com.example.kindnessjar.ui.theme.components.BottomNavBar
+import com.example.kindnessjar.ui.components.BottomNavBar
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,14 +42,9 @@ private fun AppRoot() {
 
         Scaffold(
             bottomBar = {
-                BottomNavBar { route ->
-                    // navigate when user taps a nav item
-                    navController.navigate(route) {
-                        // avoid multiple copies on back stack
-                        launchSingleTop = true
-                        // keep the nav graph root in backstack (optional)
-                        popUpTo(Routes.HOME) { inclusive = false }
-                    }
+                val currentRoute = navController.currentBackStackEntryAsState().value?.destination?.route
+                if (currentRoute != Routes.CHALLENGE) {
+                    BottomNavBar(navController)
                 }
             }
         ) { padding ->
@@ -58,9 +54,7 @@ private fun AppRoot() {
                     startDestination = Routes.HOME
                 ) {
                     composable(Routes.HOME) {
-                        HomeScreen(
-                            onPickNoteClick = { navController.navigate(Routes.CHALLENGE) }
-                        )
+                        HomeScreen(onPickNoteClick = { navController.navigate(Routes.CHALLENGE) })
                     }
                     composable(Routes.CHALLENGE) { ChallengeScreen() }
                     composable(Routes.PROGRESS) { ProgressScreen() }
@@ -68,6 +62,7 @@ private fun AppRoot() {
                 }
             }
         }
+
     }
 }
 
