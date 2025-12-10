@@ -13,17 +13,23 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 
+import com.example.kindnessjar.ui.theme.KindnessJarTheme
+
 import com.example.kindnessjar.navigation.Routes
 import com.example.kindnessjar.screens.HomeScreen
 import com.example.kindnessjar.screens.ProgressScreen
 import com.example.kindnessjar.screens.HistoryScreen
+import com.example.kindnessjar.screens.ChallengeScreen
+
 import com.example.kindnessjar.ui.theme.components.BottomNavBar
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AppRoot()
+            KindnessJarTheme {
+                AppRoot()
+            }
         }
     }
 }
@@ -51,7 +57,12 @@ private fun AppRoot() {
                     navController = navController,
                     startDestination = Routes.HOME
                 ) {
-                    composable(Routes.HOME) { HomeScreen() }
+                    composable(Routes.HOME) {
+                        HomeScreen(
+                            onPickNoteClick = { navController.navigate(Routes.CHALLENGE) }
+                        )
+                    }
+                    composable(Routes.CHALLENGE) { ChallengeScreen() }
                     composable(Routes.PROGRESS) { ProgressScreen() }
                     composable(Routes.HISTORY) { HistoryScreen() }
                 }
@@ -59,6 +70,5 @@ private fun AppRoot() {
         }
     }
 }
-
 
 

@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.sp
 import com.example.kindnessjar.R
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(onPickNoteClick: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -57,7 +57,7 @@ fun HomeScreen() {
 
             // Button
             Button(
-                onClick = { /* will navigate later */ },
+                onClick = { onPickNoteClick() },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = colorResource(id = R.color.button_blue)
                 ),
