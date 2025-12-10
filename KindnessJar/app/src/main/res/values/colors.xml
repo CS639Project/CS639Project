@@ -16,4 +16,9 @@
     <color name="history_background">#B8DCD2</color>
     <color name="history_card_bg">#3A3A3A</color>
     <color name="history_card_text">#FFFFFF</color>
+    <!--  Challenge Screen Colors  -->
+    <color name="challenge_background">#B8DCD2</color>
+    <!--  mint  -->
+    <color name="challenge_card_bg">#FFFFFF</color>
+    <color name="challenge_button_bg">#DDF1D8</color>
 </resources>
