@@ -17,4 +17,6 @@ Idea & Proposal for project:https://docs.google.com/document/d/18LbS5xYba0Pkzzon
 . Room or SharedPreferences storage of local data.
 
 . Images and icons for UI
+# Demo video 
+[KindnessJar]https://youtube.com/shorts/pqofDQeWFHY?feature=share
 
