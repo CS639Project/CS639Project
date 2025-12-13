@@ -17,6 +17,9 @@ Idea & Proposal for project:https://docs.google.com/document/d/18LbS5xYba0Pkzzon
 . Room or SharedPreferences storage of local data.
 
 . Images and icons for UI
+# Install app
+[Download Kindnessjar](https://github.com/CS639Project/cs639project/releases/tag/v1.0
+)
 # Demo video 
 [KindnessJar](https://youtube.com/shorts/pqofDQeWFHY?feature=share)
 
